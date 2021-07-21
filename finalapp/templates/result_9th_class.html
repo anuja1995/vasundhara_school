@@ -28,7 +28,7 @@
             word-break: break-all;
            }
 
-          .s_info{ border: 0px; text-align:left !important; font-size:20px; height: 35px;
+          .s_info{ border: 0px; text-align:left !important; font-size:16px;height: 35px;
           margin-bottom:400px;}
 
            .table2 {margin-top: 5px;}
@@ -41,18 +41,17 @@
         .text-center{
              text-align: center;
         }
-        .s-name{ font-size: 16px; }
+        .s-name{ font-size: 12px; }
         .area{ padding: 10px 10px 10px 10px;}
-        .vasu_green{color:green;font-size:45px;font-weight: 700;padding: -30px -50px -50px -50px;}
+        .vasu_green{color:green;font-size:40px;font-weight: 700;padding: -30px -50px -50px -50px;}
         .padding-all {padding: -8px}
         .blue {color: #232379;
-        font-size: 20px;
         font-family: initial;
         font-weight: 600;}
 
         .report-card {    text-align: center;
-        font-size: 40px;
-        font-weight: 800;
+        font-size: xxx-large;
+        font-weight: 600;
         font-family: cursive !important;
         color: #da1f1f;}
 
@@ -70,21 +69,22 @@
       <div class="row">
           <div class="col-xs-10" >
             <div class="panel">
-<!--                {% block content %}-->
-<!--                <div class="panel-body text-center area">-->
-<!--                {% load static %}-->
-<!--                    <img src="{% static 'finalapp/images/logo.jpg' %}" alt="">-->
-<!--                    <img src="finalapp/images/logo.jpg" />-->
-                    <!--                    <img src="https://scocre.com/assets/img/scocre_img.png"/>-->
-<!--                </div>-->
-<!--                {% endblock %}-->
+                {% block content %}
+                <div class="panel-body text-center area">
+                {% load static %}
+                    <img src="{% static 'finalapp/images/logo.jpg' %}" alt="">
+<!--                    <img src="finalapp/images/logo.jpg" />                    -->
+<!--                    <img src="https://scocre.com/assets/img/scocre_img.png"/>-->
+                </div>
+                {% endblock %}
 <!--            <div id="logo">-->
 <!--                <img src=/finalapp/images/logo.jpg" class="brand-logo" width=60 height=60> &lt;!&ndash;not working&ndash;&gt;-->
 <!--                <img src="static/finalapp/images/logo.jpg" class="brand-logo" height="200px"> &lt;!&ndash;not working&ndash;&gt;-->
 <!--                <h1 class="brand-name">WonderShop</h1>-->
 <!--            </div>-->
                 <div class="marge">
-                    <p class="panel-title text-center padding-all "><img src="E:/Django_projects/vasundhara_project/vasundhara_project/static/finalapp/images/logo.jpg" class="brand-logo" width=150 height=150></p>
+                    <p class="panel-title text-center padding-all ">
+<!--                        <img src="E:/Django_projects/vasundhara_project/vasundhara_project/static/finalapp/images/logo.jpg" class="brand-logo" width=150 height=150></p>-->
 <!--                    <p class="panel-title text-center"> स्वयमेव मृगेन्द्रता !</p>-->
                     <p class="panel-title text-center s-name blue">ABHINAV   SHIKSHAN   SANSTHA'S</p>
                     <p class="panel-title text-center vasu_green padding-all">VASUNDHARA ACADEMY, AKOLE</p>
@@ -96,9 +96,9 @@
                     <h1 class="report-card">REPORT CARD</h1>
                     <div class="panel-body">
                         <table class='s_info'>
-                            <thead><th class="s_info" style="width: 30%; text-align:left !important;"></th>
+                            <thead><th class="s_info" style="width: 20%; text-align:left !important;"></th>
                                     <th class="s_info" style="width: 2%; text-align:left !important;"></th>
-                                    <th class="s_info" style="width: 70%; text-align:left !important;"></th>
+                                    <th class="s_info" style="width: 80%; text-align:left !important;"></th>
                             </thead>
                             <tbody>
                             <tr>
@@ -124,34 +124,22 @@
             <thead>
             <tr>
                 <th>Scholastic Area</th>
-                <th colspan="6" scope='colgroup'>Term- I (100 marks) </th>
-                <th colspan="6" scope='colgroup'>Term- II (100 marks)</th>
+                <th colspan="6" scope='colgroup'>Term- II (100 marks) </th>
+<!--                <th colspan="6" scope='colgroup'>Term- II (100 marks)</th>-->
             </tr>
             <tr>
-                <th scope='col' style="width: 12%;">Sub Name</th>
-                <th scope='col' style="width: 7%;">P Test (20)</th>
-                <th scope='col' style="width: 7%;">Note Book (10)</th>
-                <th scope='col' style="width: 12%;">Sub Enrichment (10)</th>
-                <th scope='col' style="width: 8%;">Half Yearly Exam (80)</th>
-                <th scope='col' style="width: 9%;">Marks Obtained (100)</th>
-                <th scope='col' style="width: 8%;">Grade</th>
-                <th scope='col' style="width: 7%;">P Test (20)</th>
-                <th scope='col' style="width: 7%;">Note Book (10)</th>
-                <th scope='col' style="width: 12%;">Sub Enrichment (10)</th>
-                <th scope='col' style="width: 8%;">Half Yearly Exam (80)</th>
-                <th scope='col' style="width: 9%;">Marks Obtained (100)</th>
-                <th scope='col' style="width: 8%;">Grade</th>
+                <th scope='col' style="width: 16%;">Sub Name</th>
+                <th scope='col' style="width: 14%;">P Test (10)</th>
+                <th scope='col' style="width: 14%;">Note Book (5)</th>
+                <th scope='col' style="width: 14%;">Sub Enrichment (5)</th>
+                <th scope='col' style="width: 14%;">Half Yearly Exam (80)</th>
+                <th scope='col' style="width: 14%;">Marks Obtained (100)</th>
+                <th scope='col' style="width: 14%;">Grade</th>
             </tr>
             </thead>
             <tbody>
                     <tr>
                         <td>{{ stud_list.Subject_English }}</td>
-                        <td>{{ stud_list.English_p_test_term1 }}</td>
-                        <td>{{ stud_list.English_Note_Book_term1 }}</td>
-                        <td>{{ stud_list.English_Sub_Enrichment_term1 }} </td>
-                        <td>{{ stud_list.English_Half_Yearly_Exam_term1 }}</td>
-                        <td>{{ stud_list.English_Marks_obtained_term1 }}</td>
-                        <td>{{ stud_list.English_Grade_term1 }}</td>
                         <td>{{ stud_list.English_p_test_term2 }}</td>
                         <td>{{ stud_list.English_Note_Book_term2 }}</td>
                         <td>{{ stud_list.English_Sub_Enrichment_term2 }} </td>
@@ -161,42 +149,15 @@
                     </tr>
                     <tr>
                         <td>{{ stud_list.Subject_Hindi }}</td>
-                        <td>{{ stud_list.Hindi_p_test_term1 }}</td>
-                        <td>{{ stud_list.Hindi_Note_Book_term1 }}</td>
-                        <td>{{ stud_list.Hindi_Sub_Enrichment_term1 }} </td>
-                        <td>{{ stud_list.Hindi_Half_Yearly_Exam_term1 }}</td>
-                        <td>{{ stud_list.Hindi_Marks_obtained_term1 }}</td>
-                        <td>{{ stud_list.Hindi_Grade_term1 }}</td>
                         <td>{{ stud_list.Hindi_p_test_term2 }}</td>
                         <td>{{ stud_list.Hindi_Note_Book_term2 }}</td>
                         <td>{{ stud_list.Hindi_Sub_Enrichment_term2 }} </td>
                         <td>{{ stud_list.Hindi_Half_Yearly_Exam_term2 }}</td>
-                        <td>{{ stud_list.Hindi_Marks_obtained_term2 }}</td>
+                        <td>{{ stud_list.Hindi_Marks_obtained_term2}}</td>
                         <td>{{ stud_list.Hindi_Grade_term2 }}</td>
-                    </tr>
-                    <tr>
-                        <td>{{ stud_list.Subject_Marathi }}</td>
-                        <td>{{ stud_list.Marathi_p_test_term1 }}</td>
-                        <td>{{ stud_list.Marathi_Note_Book_term1 }}</td>
-                        <td>{{ stud_list.Marathi_Sub_Enrichment_term1 }} </td>
-                        <td>{{ stud_list.Marathi_Half_Yearly_Exam_term1 }}</td>
-                        <td>{{ stud_list.Marathi_Marks_obtained_term1 }}</td>
-                        <td>{{ stud_list.Marathi_Grade_term1 }}</td>
-                        <td>{{ stud_list.Marathi_p_test_term2 }}</td>
-                        <td>{{ stud_list.Marathi_Note_Book_term2 }}</td>
-                        <td>{{ stud_list.Marathi_Sub_Enrichment_term2 }} </td>
-                        <td>{{ stud_list.Marathi_Half_Yearly_Exam_term2 }}</td>
-                        <td>{{ stud_list.Marathi_Marks_obtained_term2 }}</td>
-                        <td>{{ stud_list.Marathi_Grade_term2 }}</td>
                     </tr>
                      <tr>
                         <td>{{ stud_list.Subject_Math }}</td>
-                        <td>{{ stud_list.Math_p_test_term1 }}</td>
-                        <td>{{ stud_list.Math_Note_Book_term1 }}</td>
-                        <td>{{ stud_list.Math_Sub_Enrichment_term1 }} </td>
-                        <td>{{ stud_list.Math_Half_Yearly_Exam_term1 }}</td>
-                        <td>{{ stud_list.Math_Marks_obtained_term1 }}</td>
-                        <td>{{ stud_list.Math_Grade_term1 }}</td>
                         <td>{{ stud_list.Math_p_test_term2 }}</td>
                         <td>{{ stud_list.Math_Note_Book_term2 }}</td>
                         <td>{{ stud_list.Math_Sub_Enrichment_term2 }} </td>
@@ -206,12 +167,6 @@
                     </tr>
                     <tr>
                         <td>{{ stud_list.Subject_Sci }}</td>
-                        <td>{{ stud_list.Sci_p_test_term1 }}</td>
-                        <td>{{ stud_list.Sci_Note_Book_term1 }}</td>
-                        <td>{{ stud_list.Sci_Sub_Enrichment_term1 }} </td>
-                        <td>{{ stud_list.Sci_Half_Yearly_Exam_term1 }}</td>
-                        <td>{{ stud_list.Sci_Marks_obtained_term1 }}</td>
-                        <td>{{ stud_list.Sci_Grade_term1 }}</td>
                         <td>{{ stud_list.Sci_p_test_term2 }}</td>
                         <td>{{ stud_list.Sci_Note_Book_term2 }}</td>
                         <td>{{ stud_list.Sci_Sub_Enrichment_term2 }} </td>
@@ -221,12 +176,6 @@
                     </tr>
                      <tr>
                         <td>{{ stud_list.Subject_So_Sci }}</td>
-                        <td>{{ stud_list.So_Sci_p_test_term1 }}</td>
-                        <td>{{ stud_list.So_Sci_Note_Book_term1 }}</td>
-                        <td>{{ stud_list.So_Sci_Sub_Enrichment_term1 }} </td>
-                        <td>{{ stud_list.So_Sci_Half_Yearly_Exam_term1 }}</td>
-                        <td>{{ stud_list.So_Sci_Marks_obtained_term1 }}</td>
-                        <td>{{ stud_list.So_Sci_Grade_term1 }}</td>
                         <td>{{ stud_list.So_Sci_p_test_term2 }}</td>
                         <td>{{ stud_list.So_Sci_Note_Book_term2 }}</td>
                         <td>{{ stud_list.So_Sci_Sub_Enrichment_term2 }} </td>
@@ -235,13 +184,16 @@
                         <td>{{ stud_list.So_Sci_Grade_term2 }}</td>
                     </tr>
                     <tr>
+                        <td>{{ stud_list.Subject_IT }}</td>
+                        <td>{{ stud_list.IT_p_test_term2 }}</td>
+                        <td>{{ stud_list.IT_Note_Book_term2 }}</td>
+                        <td>{{ stud_list.IT_Sub_Enrichment_term2 }} </td>
+                        <td>{{ stud_list.IT_Half_Yearly_Exam_term2 }}</td>
+                        <td>{{ stud_list.IT_Marks_obtained_term2 }}</td>
+                        <td>{{ stud_list.IT_Grade_term2 }}</td>
+                    </tr>
+                    <tr>
                         <td style="height: 11px;"></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -253,27 +205,19 @@
         </table>
         <table class="table table2">
             <thead>
-                <th style="width: 40%;">Co-Scholastic Area : Term-I [on a 3-point (A-C) grading Scale]</th>
-                <th style="width: 10%;">Grade </th>
-                <th style="width: 40%;">Co-Scholastic Area : Term-II [on a 3-point (A-C) grading Scale]</th>
-                <th style="width: 10%;">Grade </th>
+                <th style="width: 50%;">Co-Scholastic Area : Term-II [on a 3-point (A-C) grading Scale]</th>
+                <th style="width: 50%;">Grade </th>
             </thead>
              <tbody>
                     <tr>
-                        <td>Work Education (or Pre-vocational Education)</td>
-                        <td>{{ stud_list.Work_Education_term1 }}</td>
                         <td>Work Education (or Pre-vocational Education)</td>
                         <td>{{ stud_list.Work_Education_term2 }}</td>
                     </tr>
                     <tr>
                         <td>Art Education</td>
-                        <td>{{ stud_list.Art_Education_term1 }}</td>
-                        <td>Art Education</td>
                         <td>{{ stud_list.Art_Education_term2 }}</td>
                     </tr>
                     <tr>
-                        <td>Health & Physical Education</td>
-                        <td>{{ stud_list.H_P_Education_term1 }}</td>
                         <td>Health & Physical Education</td>
                         <td>{{ stud_list.H_P_Education_term2 }}</td>
                     </tr>
@@ -281,15 +225,11 @@
         </table>
         <table class="table table3">
             <thead>
-                <th style="width: 40%;"></th>
-                <th style="width: 10%;">Grade </th>
-                <th style="width: 40%;"></th>
-                <th style="width: 10%;">Grade </th>
+                <th style="width: 50%;"></th>
+                <th style="width: 50%;">Grade </th>
             </thead>
             <tbody>
                     <tr>
-                        <td>Discipline : Term-I [on a 3-point(A-C) grading Scale]</td>
-                        <td>{{ stud_list.Discipline_term1 }}</td>
                         <td>Discipline : Term-II [on a 3-point(A-C) grading Scale]</td>
                         <td>{{ stud_list.Discipline_term2 }}</td>
                     </tr>
@@ -351,3 +291,4 @@
 </div>
 </body>
 </html>
+

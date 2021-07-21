@@ -19,9 +19,11 @@ coreschema==0.0.4
 decorator==4.4.2
 defusedxml==0.6.0
 distlib==0.3.1
+dj-database-url==0.5.0
 Django==2.2.7
 django-crispy-forms==1.11.2
 django-filter==2.4.0
+django-heroku==0.3.1
 django-rest-swagger==2.2.0
 django-widget-tweaks==1.4.8
 djangorestframework==3.11.1
@@ -37,7 +39,7 @@ Flask-Bcrypt==0.7.1
 Flask-Env==2.0.0
 future==0.18.2
 greenlet==0.4.17
-helloworld-pkg-by-anuja==0.0.1
+gunicorn==20.1.0
 html5lib==1.1
 idna==2.10
 iniconfig==1.1.1
@@ -65,8 +67,6 @@ jupyterlab-widgets==1.0.0
 keyring==21.4.0
 MarkupSafe==1.1.1
 mistune==0.8.4
-mysql-connector-python==2.1.8
-mysqlclient @ file:///C:/Users/Anuja/Downloads/mysqlclient-1.4.6-cp38-cp38-win32.whl
 nbclassic==0.2.6
 nbclient==0.5.3
 nbconvert==6.0.7
@@ -86,6 +86,7 @@ pluggy==0.13.1
 prometheus-client==0.9.0
 prompt-toolkit==3.0.16
 protobuf==3.6.1
+psycopg2==2.9.1
 py==1.10.0
 pycparser==2.20
 Pygments==2.7.1
@@ -97,7 +98,6 @@ pytest==6.2.2
 python-bidi==0.4.2
 python-dateutil==2.8.1
 pytz==2020.1
-pywin32==300
 pywin32-ctypes==0.2.0
 pywinpty==0.5.7
 pyzmq==22.0.3
@@ -127,6 +127,7 @@ virtualenv==20.0.31
 wcwidth==0.2.5
 webencodings==0.5.1
 Werkzeug==1.0.1
+whitenoise==5.2.0
 widgetsnbextension==3.5.1
 xhtml2pdf==0.2.5
 xlrd==1.2.0

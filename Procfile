@@ -1,0 +1,1 @@
+gunicorn vasundhara_project.wsgi
