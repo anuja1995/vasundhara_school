@@ -1,0 +1,260 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+  <form method="post" action="">
+    {% csrf_token %}
+<!--    {{ form | crispy }}-->
+
+    <div class="form-row">
+      <div class="form-group col-md-3 mb-0">
+        {{ form.Academic_Session|as_crispy_field }}
+      </div>
+      <div class="form-group col-md-3 mb-0">
+        {{ form.Stud_class|as_crispy_field }}
+      </div>
+      <div class="form-group col-md-3 mb-0">
+        {{ form.Section|as_crispy_field }}
+      </div>
+      <div class="form-group col-md-3 mb-0">
+        {{ form.Roll_no|as_crispy_field }}
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-3 mb-0">
+        {{ form.Student_name|as_crispy_field }}
+      </div>
+      <div class="form-group col-md-3 mb-0">
+        {{ form.Father_name|as_crispy_field }}
+      </div>
+      <div class="form-group col-md-3 mb-0">
+        {{ form.Mother_name|as_crispy_field }}
+      </div>
+      <div class="form-group col-md-3 mb-0">
+        {{ form.Date_of_Birth|as_crispy_field }}
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-4 mb-0">
+        {{ form.English_p_test_term1|as_crispy_field }}
+      </div>
+      <div class="form-group col-md-4 mb-0">
+        {{ form.English_Note_Book_term1|as_crispy_field }}
+      </div>
+      <div class="form-group col-md-4 mb-0">
+        {{ form.English_Sub_Enrichment_term1|as_crispy_field }}
+      </div>
+      <div class="form-group col-md-4 mb-0">
+        {{ form.English_Half_Yearly_Exam_term1|as_crispy_field }}
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-4 mb-0">
+        {{ form.English_p_test_term2|as_crispy_field }}
+      </div>
+      <div class="form-group col-md-4 mb-0">
+        {{ form.English_Note_Book_term2|as_crispy_field }}
+      </div>
+      <div class="form-group col-md-4 mb-0">
+        {{ form.English_Sub_Enrichment_term2|as_crispy_field }}
+      </div>
+      <div class="form-group col-md-4 mb-0">
+        {{ form.English_Half_Yearly_Exam_term2|as_crispy_field }}
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-4 mb-0">
+        {{ form.Hindi_p_test_term1|as_crispy_field }}
+      </div>
+      <div class="form-group col-md-4 mb-0">
+        {{ form.Hindi_Note_Book_term1|as_crispy_field }}
+      </div>
+      <div class="form-group col-md-4 mb-0">
+        {{ form.Hindi_Sub_Enrichment_term1|as_crispy_field }}
+      </div>
+      <div class="form-group col-md-4 mb-0">
+        {{ form.Hindi_Half_Yearly_Exam_term1|as_crispy_field }}
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-4 mb-0">
+        {{ form.Hindi_p_test_term2|as_crispy_field }}
+      </div>
+      <div class="form-group col-md-4 mb-0">
+        {{ form.Hindi_Note_Book_term2|as_crispy_field }}
+      </div>
+      <div class="form-group col-md-4 mb-0">
+        {{ form.Hindi_Sub_Enrichment_term2|as_crispy_field }}
+      </div>
+      <div class="form-group col-md-4 mb-0">
+        {{ form.Hindi_Half_Yearly_Exam_term2|as_crispy_field }}
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-4 mb-0">
+        {{ form.Marathi_p_test_term1|as_crispy_field }}
+      </div>
+      <div class="form-group col-md-4 mb-0">
+        {{ form.Marathi_Note_Book_term1|as_crispy_field }}
+      </div>
+      <div class="form-group col-md-4 mb-0">
+        {{ form.Marathi_Sub_Enrichment_term1|as_crispy_field }}
+      </div>
+      <div class="form-group col-md-4 mb-0">
+        {{ form.Marathi_Half_Yearly_Exam_term1|as_crispy_field }}
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-4 mb-0">
+        {{ form.Marathi_p_test_term2|as_crispy_field }}
+      </div>
+      <div class="form-group col-md-4 mb-0">
+        {{ form.Marathi_Note_Book_term2|as_crispy_field }}
+      </div>
+      <div class="form-group col-md-4 mb-0">
+        {{ form.Marathi_Sub_Enrichment_term2|as_crispy_field }}
+      </div>
+      <div class="form-group col-md-4 mb-0">
+        {{ form.Marathi_Half_Yearly_Exam_term2|as_crispy_field }}
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-4 mb-0">
+        {{ form.Math_p_test_term1|as_crispy_field }}
+      </div>
+      <div class="form-group col-md-4 mb-0">
+        {{ form.Math_Note_Book_term1|as_crispy_field }}
+      </div>
+      <div class="form-group col-md-4 mb-0">
+        {{ form.Math_Sub_Enrichment_term1|as_crispy_field }}
+      </div>
+      <div class="form-group col-md-4 mb-0">
+        {{ form.Math_Half_Yearly_Exam_term1|as_crispy_field }}
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-4 mb-0">
+        {{ form.Math_p_test_term2|as_crispy_field }}
+      </div>
+      <div class="form-group col-md-4 mb-0">
+        {{ form.Math_Note_Book_term2|as_crispy_field }}
+      </div>
+      <div class="form-group col-md-4 mb-0">
+        {{ form.Math_Sub_Enrichment_term2|as_crispy_field }}
+      </div>
+      <div class="form-group col-md-4 mb-0">
+        {{ form.Math_Half_Yearly_Exam_term2|as_crispy_field }}
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-4 mb-0">
+        {{ form.Sci_p_test_term1|as_crispy_field }}
+      </div>
+      <div class="form-group col-md-4 mb-0">
+        {{ form.Sci_Note_Book_term1|as_crispy_field }}
+      </div>
+      <div class="form-group col-md-4 mb-0">
+        {{ form.Sci_Sub_Enrichment_term1|as_crispy_field }}
+      </div>
+      <div class="form-group col-md-4 mb-0">
+        {{ form.Sci_Half_Yearly_Exam_term1|as_crispy_field }}
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-4 mb-0">
+        {{ form.Sci_p_test_term2|as_crispy_field }}
+      </div>
+      <div class="form-group col-md-4 mb-0">
+        {{ form.Sci_Note_Book_term2|as_crispy_field }}
+      </div>
+      <div class="form-group col-md-4 mb-0">
+        {{ form.Sci_Sub_Enrichment_term2|as_crispy_field }}
+      </div>
+      <div class="form-group col-md-4 mb-0">
+        {{ form.Sci_Half_Yearly_Exam_term2|as_crispy_field }}
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-4 mb-0">
+        {{ form.So_Sci_p_test_term1|as_crispy_field }}
+      </div>
+      <div class="form-group col-md-4 mb-0">
+        {{ form.So_Sci_Note_Book_term1|as_crispy_field }}
+      </div>
+      <div class="form-group col-md-4 mb-0">
+        {{ form.So_Sci_Sub_Enrichment_term1|as_crispy_field }}
+      </div>
+      <div class="form-group col-md-4 mb-0">
+        {{ form.So_Sci_Half_Yearly_Exam_term1|as_crispy_field }}
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-4 mb-0">
+        {{ form.So_Sci_p_test_term2|as_crispy_field }}
+      </div>
+      <div class="form-group col-md-4 mb-0">
+        {{ form.So_Sci_Note_Book_term2|as_crispy_field }}
+      </div>
+      <div class="form-group col-md-4 mb-0">
+        {{ form.So_Sci_Sub_Enrichment_term2|as_crispy_field }}
+      </div>
+      <div class="form-group col-md-4 mb-0">
+        {{ form.So_Sci_Half_Yearly_Exam_term2|as_crispy_field }}
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-4 mb-0">
+        {{ form.Work_Education_term1|as_crispy_field }}
+      </div>
+      <div class="form-group col-md-4 mb-0">
+        {{ form.Work_Education_term2|as_crispy_field }}
+      </div>
+      <div class="form-group col-md-4 mb-0">
+        {{ form.Art_Education_term1|as_crispy_field }}
+      </div>
+      <div class="form-group col-md-4 mb-0">
+        {{ form.Art_Education_term2|as_crispy_field }}
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-4 mb-0">
+        {{ form.H_P_Education_term1|as_crispy_field }}
+      </div>
+      <div class="form-group col-md-4 mb-0">
+        {{ form.H_P_Education_term2|as_crispy_field }}
+      </div>
+      <div class="form-group col-md-4 mb-0">
+        {{ form.Discipline_term1|as_crispy_field }}
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-4 mb-0">
+        {{ form.Discipline_term2|as_crispy_field }}
+      </div>
+      <div class="form-group col-md-4 mb-0">
+        {{ form.Promoted_to_class|as_crispy_field }}
+      </div>
+    </div>
+
+
+<!--    <table>-->
+<!--        {{ form.as_table }}-->
+<!--    </table>-->
+    <button type="submit" class="btn btn-primary">Sign in</button>
+  </form>
+{% endblock %}

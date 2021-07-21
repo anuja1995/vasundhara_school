@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>Sales Report</title>
+    <style type="text/css">
+     .row{
+        display: inline-block !important;
+        margin-top: 30px !important;
+        margin-bottom: 30px !important;
+        }
+     .container{text-align: center !important;}
+     .vasu_green{color: green;}
+     .table td { border-bottom: 0px !important;border-top: 0px !important;}
+     .table { margin-top: 20px !important;}
+
+    </style>
+</head>
+<body>
+
+<div class="container pdf_align">
+    <div class="row ">
+        <div class="col-xs-10" >
+            <div class="panel panel-primary"  >
+                <div class="panel-body">
+                    <img src="https://scocre.com/assets/img/scocre_img.png"/>
+                </div>
+                <!-- Default panel contents -->
+                <div class="panel-heading">
+                    <h1 class="panel-title text-center strong">ABHINAV SHIKSHAN SANSTHA'S</h1>
+                    <h1 class="panel-title text-center vasu_green">VASUNDHARA ACADEMY, AKOLE</h1>
+                    <h3 class="panel-title text-center">Affiliated to Central Board of Secondary Education,Delhi</h3>
+                    <h3 class="panel-title text-center">(Affiliated No.- 1130637)</h3>
+                    <h3 class="panel-title text-center">Tal.: Akole, Dist.: Ahmednagar.</h3>
+                    <h3 class="panel-title text-center">Ph.: 02424 - 221283, 223458</h3>
+<!--                    <h5 class="panel-title text-center">Academic Session: </h5>-->
+                    <div class="panel-body">
+                        {% for stud in stud_list %}
+                        <h class="text-left"> Roll No : </h><p class="text-center">{{ stud.Roll_no }}</p>
+                        <p class="text-left"> Student's Name :</p><p class="text-center"> {{ stud.Student_name }}</p>
+                        <p class="text-left"> Father's Name : </p><p class="text-center">{{ stud.Father_name }}</p>
+                        <p class="text-left"> Mother's Name : </p><p class="text-center">{{ stud.Mother_name }}</p>
+                        <p class="text-left"> Date Of Birth : </p><p class="text-center">{{ stud.Date_of_Birth }}</p>
+
+                        {% endfor %}
+                    </div>
+
+
+
+                    <table class="table table-hover text-left">
+                        <tbody>
+                        {% for stud in stud_list %}
+                            <tr>
+
+                                <td>Roll No.:</td>
+                                <td>{{ stud.Roll_no }}</td>
+
+                            </tr>
+                            <tr>
+                                <td>Student's Name:</td>
+                                <td>{{ stud.Student_name }}</td>
+
+                            </tr>
+                            <tr>
+                                <td> Father's Name:</td>
+                                <td>{{ stud.Father_name }}</td>
+
+                            </tr>
+                             <tr>
+                                <td> Mother's Name:</td>
+                                <td> {{ stud.Mother_name }}</td>
+
+                            </tr>
+                             <tr>
+                                <td> Date Of Birth:</td>
+                                <td> {{ stud.Date_of_Birth }}</td>
+                            </tr>
+                            <tr>
+                                <td> Class:</td>
+                                <td>{{ stud.Stud_class.Class_Name }} </td>
+                            </tr>
+                            <tr>
+                                <td> Section:</td>
+                                <td> {{ stud.Section.Section_Name }}</td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Sales Report</title>
+    <style type="text/css">
+
+
+
+        body {
+                font-weight: 200;
+                font-size: 12px;
+            }
+            .header {
+                font-size: 20px;
+                font-weight: 100;
+                text-align: center;
+                color: #007cae;
+            }
+            .title {
+                font-size: 22px;
+                font-weight: 100;
+               /* text-align: right;*/
+               padding: 10px 20px 0px 20px;
+            }
+            .title span {
+                color: #007cae;
+            }
+            .details {
+                padding: 10px 20px 0px 20px;
+                text-align: left !important;
+                /*margin-left: 40%;*/
+            }
+            .hrItem {
+                border: none;
+                height: 1px;
+                /* Set the hr color */
+                color: #333; /* old IE */
+                background-color: #fff; /* Modern Browsers */
+            }
+            table {
+                table-layout: fixed;
+                width: 100%;
+                word-break: break-all;
+            }
+            th, td { border: 1px solid black;
+            font-size: 10px;
+            padding-top: 2px;}
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h3>Sales Report - {{ today | date:"d/m/Y" }}</h3>
+        </div>
+    </div>
+        <div class="col-xs-10" >
+            <div class="panel panel-primary"  >
+                <div class="panel-body">
+                    <img src="https://scocre.com/assets/img/scocre_img.png"/>
+                </div>
+                <div class="panel-heading">
+                    <h1 class="panel-title text-center strong">ABHINAV SHIKSHAN SANSTHA'S</h1>
+                    <h1 class="panel-title text-center vasu_green">VASUNDHARA ACADEMY, AKOLE</h1>
+                    <h3 class="panel-title text-center">Affiliated to Central Board of Secondary Education,Delhi</h3>
+                    <h3 class="panel-title text-center">(Affiliated No.- 1130637)</h3>
+                    <h3 class="panel-title text-center">Tal.: Akole, Dist.: Ahmednagar.</h3>
+                    <h3 class="panel-title text-center">Ph.: 02424 - 221283, 223458</h3>
+<!--                    <h5 class="panel-title text-center">Academic Session: </h5>-->
+                    <div class="panel-body">
+<!--                        {{ stud_list }}-->
+                        <h3 class="text-left"> Roll No : {{ stud_list.Roll_no }}</h3>
+                        <h3 class="text-left"> Student's Name : {{ stud_list.Student_name }}</h3>
+                        <h3 class="text-left"> Father's Name : {{ stud_list.Father_name }}</h3>
+                        <h3 class="text-left"> Mother's Name : {{ stud_list.Mother_name }}</h3>
+                        <h3 class="text-left"> Date Of Birth : {{ stud_list.Date_of_Birth }}</h3>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+
+<!--        <div class="list-group">-->
+<!--            <p>Name: {{ request.user.first_name }} {{ request.user.last_name }}</p>-->
+<!--        </div>-->
+
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Scholastic Area</th>
+                <th colspan="6" scope='colgroup'>Term- I (100 marks) </th>
+                <th colspan="6" scope='colgroup'>Term- II (100 marks)</th>
+            </tr>
+            <tr>
+                <th scope='col'>Sub Name</th>
+                <th scope='col'>P Test (10)</th>
+                <th scope='col'>Note Book (5)</th>
+                <th scope='col'>Sub Enrichment (5)</th>
+                <th scope='col'>Half Yearly Exam (80)</th>
+                <th scope='col'>Marks Obtained (100)</th>
+                <th scope='col'>Grade</th>
+                <th scope='col'>P Test (10)</th>
+                <th scope='col'>Note Book (5)</th>
+                <th scope='col'>Sub Enrichment (5)</th>
+                <th scope='col'>Half Yearly Exam (80)</th>
+                <th scope='col'>Marks Obtained (100)</th>
+                <th scope='col'>Grade</th>
+            </tr>
+            </thead>
+            <tbody>
+<!--                <p> hello </p>-->
+                    <tr>
+                        <td>{{ stud_list.Roll_no }}</td>
+                        <td>{{ stud_list.Student_name }}</td>
+                        <td>{{ stud_list.Father_name }}</td>
+                        <td>{{ stud_list.Mother_name }} </td>
+                        <td>{{ stud_list.Date_of_Birth }}</td>
+                        <td>{{ stud_list.Section.Section_Name }}</td>
+                        <td>{{ stud_list.Stud_class.Class_Name }}</td>
+                    </tr>
+            </tbody>
+        </table>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

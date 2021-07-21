@@ -1,0 +1,352 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Sales Report</title>
+    <style type="text/css">
+
+
+        body {
+                font-weight: 200;
+                font-size: 14px;
+                font-stretch: extra-expanded;
+
+            }
+            .main-table{border:1px solid black}
+
+          table {
+                width: 100%;
+                word-break: break-all;
+           }
+           th, td { border: 1px solid black;
+            font-size: 12px;
+            padding-top: 2px;
+            text-align: center;
+            word-break: break-all;
+           }
+
+          .s_info{ border: 0px; text-align:left !important; font-size:16px;height: 35px;
+          margin-bottom:400px;}
+
+           .table2 {margin-top: 5px;}
+           .table3 {margin-top: 5px;}
+
+           td {height: 25px;}
+           .table th {background-color: #f7f7b2;}
+           .p_left{padding-left: 15px;}
+
+        .text-center{
+             text-align: center;
+        }
+        .s-name{ font-size: 12px; }
+        .area{ padding: 10px 10px 10px 10px;}
+        .vasu_green{color:green;font-size:40px;font-weight: 700;padding: -30px -50px -50px -50px;}
+        .padding-all {padding: -8px}
+        .blue {color: #232379;
+        font-family: initial;
+        font-weight: 600;}
+
+        .report-card {    text-align: center;
+        font-size: xxx-large;
+        font-weight: 600;
+        font-family: cursive !important;
+        color: #da1f1f;}
+
+      .marge{margin-top:100px;
+}
+
+
+
+   </style>
+</head>
+<body>
+
+
+
+
+<div class="container">
+      <div class="row">
+          <div class="col-xs-10" >
+            <div class="panel">
+                {% block content %}
+                <div class="panel-body text-center area">
+                {% load static %} <img src="{% static 'finalapp/images/logo.png'%}" alt="">
+                    <!--                    <img src="https://scocre.com/assets/img/scocre_img.png"/>-->
+                </div>
+                {% endblock %}
+                <div class="marge">
+                    <p class="panel-title text-center s-name blue">ABHINAV   SHIKSHAN   SANSTHA'S</p>
+                    <p class="panel-title text-center vasu_green padding-all">VASUNDHARA ACADEMY, AKOLE</p>
+                    <p class="panel-title text-center padding-all blue">Affiliated to Central Board of Secondary Education,Delhi</p>
+                    <p class="panel-title text-center padding-all " style="padding-bottom: 5px;">(Affiliated No.- 1130637)</p>
+                    <p class="panel-title text-center padding-all padding-all" style="font-size: 18px;">Tal.: Akole, Dist.: Ahmednagar.</p>
+                    <p class="panel-title text-center padding-all">Ph.: 02424 - 221283, 223458</p>
+                    <p class="panel-title text-center padding-all blue" style="font-size: 18px;text-align:center;">Academic Session : 2020-2021</p>
+                    <h1 class="report-card">REPORT CARD</h1>
+                    <div class="panel-body">
+                        <table class='s_info'>
+                            <thead><th class="s_info" style="width: 20%; text-align:left !important;"></th>
+                                    <th class="s_info" style="width: 2%; text-align:left !important;"></th>
+                                    <th class="s_info" style="width: 80%; text-align:left !important;"></th>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="s_info"><p class="text-left"> Roll No. </td><td class="s_info"> : </td><td class="s_info"></td></p>
+                            </tr>
+                            <tr><td class="s_info"><p class="text-left"> Student's Name </td><td class="s_info"> : </td><td class="s_info">Prathmesh Gorkhnath khedkar</td></p></tr>
+                            <tr><td class="s_info"><p class="text-left"> Father's Name </td><td  class="s_info"> : </td><td class="s_info">Gorkhnath</td></p></tr>
+                            <tr><td class="s_info"><p class="text-left"> Mother's Name </td><td class="s_info"> : </td><td class="s_info">Pratibha</td></p></tr>
+                            <tr><td class="s_info"><p class="text-left"> Date Of Birth </td><td class="s_info"> : </td><td class="s_info"></td></p></tr>
+                            <tr><td class="s_info"><p class="text-left"> Class / Section </td><td class="s_info"> : </td><td class="s_info">5th</td></p></tr>
+                            <tr><td class="s_info"></td><td class="s_info"></td><td class="s_info"></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+</div>
+
+
+        <table class="table table1">
+            <thead>
+            <tr>
+                <th>Scholastic Area</th>
+                <th colspan="6" scope='colgroup'>Term- I (100 marks) </th>
+                <th colspan="6" scope='colgroup'>Term- II (100 marks)</th>
+            </tr>
+            <tr>
+                <th scope='col' style="width: 13%;">Sub Name</th>
+                <th scope='col' style="width: 8%;">P Test (20)</th>
+                <th scope='col' style="width: 8%;">Note Book (10)</th>
+                <th scope='col' style="width: 9%;">Sub Enrichment (10)</th>
+                <th scope='col' style="width: 8%;">Half Yearly Exam (80)</th>
+                <th scope='col' style="width: 8%;">Marks Obtained (100)</th>
+                <th scope='col' style="width: 8%;">Grade</th>
+                <th scope='col' style="width: 8%;">P Test (20)</th>
+                <th scope='col' style="width: 8%;">Note Book (10)</th>
+                <th scope='col' style="width: 8%;">Sub Enrichment (10)</th>
+                <th scope='col' style="width: 8%;">Half Yearly Exam (80)</th>
+                <th scope='col' style="width: 8%;">Marks Obtained (100)</th>
+                <th scope='col' style="width: 8%;">Grade</th>
+            </tr>
+            </thead>
+            <tbody>
+                    <tr>
+                       <td>English</td>
+                        <td>18</td>
+                        <td>8</td>
+                        <td>10 </td>
+                        <td>48</td>
+                        <td>84</td>
+                        <td>A2</td>
+                        <td>17</td>
+                        <td>9</td>
+                        <td>9 </td>
+                        <td>53</td>
+                        <td>88</td>
+                        <td>A2</td>
+                    </tr>
+                    <tr>
+                        <td>Hindi</td>
+                        <td>19</td>
+                        <td>10</td>
+                        <td>9 </td>
+                        <td>45</td>
+                        <td>83</td>
+                        <td>A2</td>
+                        <td>19</td>
+                        <td>10</td>
+                        <td>10</td>
+                        <td>51</td>
+                        <td>90</td>
+                        <td>A1</td>
+                    </tr>
+                    <tr>
+                        <td>Marathi</td>
+                        <td>15</td>
+                        <td>8</td>
+                        <td>8</td>
+                        <td>42</td>
+                        <td>73</td>
+                        <td>B1</td>
+                        <td>18</td>
+                        <td>9</td>
+                        <td>8</td>
+                        <td>39</td>
+                        <td>74</td>
+                        <td>B1</td>
+                    </tr>
+                    <tr>
+                        <td>Mathematics</td>
+                        <td>18</td>
+                        <td>10</td>
+                        <td>10</td>
+                        <td>46</td>
+                        <td>84</td>
+                        <td>A2</td>
+                        <td>17</td>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>48</td>
+                        <td>82</td>
+                        <td>A2</td>
+                    </tr>
+                    <tr>
+                        <td>Science/EVS</td>
+                        <td>20</td>
+                        <td>8</td>
+                        <td>8</td>
+                        <td>47</td>
+                        <td>83</td>
+                        <td>A1</td>
+                        <td>19</td>
+                        <td>9</td>
+                        <td>10</td>
+                        <td>49</td>
+                        <td>87</td>
+                        <td>A2</td>
+                    </tr>
+                    <tr>
+                        <td>So.Science</td>
+                        <td>17</td>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>53</td>
+                        <td>87</td>
+                        <td>A2</td>
+                        <td>19</td>
+                        <td>9</td>
+                        <td>9</td>
+                        <td>54</td>
+                        <td>91</td>
+                        <td>A1</td>
+
+                    </tr>
+                    <tr>
+                        <td style="height: 11px;"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+            </tbody>
+        </table>
+        <table class="table table2">
+            <thead>
+                <th style="width: 40%;">Co-Scholastic Area : Term-I [on a 3-point (A-C) grading Scale]</th>
+                <th style="width: 10%;">Grade </th>
+                <th style="width: 40%;">Co-Scholastic Area : Term-II [on a 3-point (A-C) grading Scale]</th>
+                <th style="width: 10%;">Grade </th>
+            </thead>
+             <tbody>
+                    <tr>
+                        <td>Work Education (or Pre-vocational Education)</td>
+                        <td>A</td>
+                        <td>Work Education (or Pre-vocational Education)</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <td>Art Education</td>
+                        <td>A</td>
+                        <td>Art Education</td>
+                        <td>B</td>
+                    </tr>
+                    <tr>
+                        <td>Health & Physical Education</td>
+                        <td>A</td>
+                        <td>Health & Physical Education</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <td>Health & Physical Education</td>
+                        <td>A</td>
+                        <td>Health & Physical Education</td>
+                        <td>A</td>
+                    </tr>
+             </tbody>
+        </table>
+        <table class="table table3">
+            <thead>
+                <th style="width: 40%;"></th>
+                <th style="width: 10%;">Grade </th>
+                <th style="width: 40%;"></th>
+                <th style="width: 10%;">Grade </th>
+            </thead>
+            <tbody>
+                    <tr>
+                        <td>Discipline : Term-I [on a 3-point(A-C) grading Scale]</td>
+                        <td>A</td>
+                        <td>Discipline : Term-II [on a 3-point(A-C) grading Scale]</td>
+                        <td>A</td>
+                    </tr>
+            </tbody>
+        </table>
+
+<p class="p_left"> Class Teacher's Remarks : </p>
+<p class="p_left"> Promoted to Class : 6th Class </p>
+<p class="p_left"> Place : </p>
+<p class="p_left"> Date : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Class Teacher's Sign
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Principal's Sign</p>
+
+    <hr style="width:50%;text-align:left;margin-left:0">
+    <div>
+        <h1 style="color: #f107b4; text-align:center;font-weight: 500;font-size: xxx-large;"> Instructions</h1>
+        <p style="text-align:center;font-size:14px;"> Grading Scale for scholastic areas : Grade are awarded on a 8-point grading scale as follows- </p>
+    </div>
+        <table class="table table4">
+            <thead>
+                <th>Marks Range</th>
+                <th>Grade</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>91-100</td>
+                    <td><h3>A 1</h3></td>
+                </tr>
+                <tr>
+                    <td>81-90</td>
+                    <td><h3>A 2</h3></td>
+                </tr>
+                <tr>
+                    <td>71-80</td>
+                    <td><h3>B 1</h3></td>
+                </tr>
+                <tr>
+                    <td>61-70</td>
+                    <td><h3>B 2</h3></td>
+                </tr>
+                <tr>
+                    <td>51-60</td>
+                    <td><h3>C 1</h3></td>
+                </tr>
+                <tr>
+                    <td>41-50</td>
+                    <td><h3>C 2</h3></td>
+                </tr>
+                <tr>
+                    <td>33-40</td>
+                    <td><h3>D</h3></td>
+                </tr>
+                <tr>
+                    <td>32 & Below</td>
+                    <td><h3>E(Needs improvement)</h3></td>
+                </tr>
+            </tbody>
+        </table>
+
+</div>
+</body>
+</html>
