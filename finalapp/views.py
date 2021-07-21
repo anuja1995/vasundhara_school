@@ -257,8 +257,17 @@ def StudentDetailsView(request, *args, **kwargs):
                 'stud_list':stud_list,
             }
             pdf = render_to_pdf('studentform.html', data)
-            return HttpResponse(pdf, content_type='application/pdf')
-            # return render(request, 'demo.html', {'users': users})
+            if pdf:
+                response = HttpResponse(pdf, content_type='application/pdf')
+                filename = "%s_%s.pdf" % (Roll_no,Student_name)
+                content = "inline; filename=%s" % (filename)
+                download = request.GET.get("download")
+                if download:
+                    content = "attachment; filename=%s" % (filename)
+                response['Content-Disposition'] = content
+                return response
+            return HttpResponse("Not found")
+#             return HttpResponse(pdf, content_type='application/pdf')
     else:
         form = RegisterForm()
     return render(request, 'finalapp/student_details_form.html',{'form':form})
@@ -407,8 +416,17 @@ def class9_StudentDetailsView(request, *args, **kwargs):
             }
             # print('Stud_class',Stud_class)
             pdf = render_to_pdf('result_9th_class.html', data)
-            return HttpResponse(pdf, content_type='application/pdf')
-            # return render(request, 'demo.html', {'users': users})
+            if pdf:
+                response = HttpResponse(pdf, content_type='application/pdf')
+                filename = "%s_%s.pdf" % (Roll_no,Student_name)
+                content = "inline; filename=%s" % (filename)
+                download = request.GET.get("download")
+                if download:
+                    content = "attachment; filename=%s" % (filename)
+                response['Content-Disposition'] = content
+                return response
+            return HttpResponse("Not found")
+#             return HttpResponse(pdf, content_type='application/pdf')
     else:
         form = RegisterForm_class9()
     return render(request, 'finalapp/student_details_form_9th.html',{'form':form})
