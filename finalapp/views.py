@@ -26,7 +26,8 @@ from io import BytesIO
 # from django.template.loader import get_template
 from xhtml2pdf import pisa
 from django.template import Context
-
+from datetime import datetime
+from django.utils import formats
 from django.http import HttpResponse
 
 def index(request):
