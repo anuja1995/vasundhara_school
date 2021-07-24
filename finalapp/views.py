@@ -56,7 +56,9 @@ def StudentDetailsView(request, *args, **kwargs):
             Student_name = form.data['Student_name']
             Father_name = form.data['Father_name']
             Mother_name = form.data['Mother_name']
-            Date_of_Birth = form.data['Date_of_Birth']
+            Date_of_Birth_pre = form.data['Date_of_Birth']
+            Date_of_Birth_format = datetime.strptime(Date_of_Birth_pre, '%Y-%m-%d')
+            Date_of_Birth = Date_of_Birth_format.strftime('%d/%m/%Y')
 
             Subject_English = 'English'
             English_p_test_term1 = form.data['English_p_test_term1']
@@ -288,7 +290,9 @@ def class9_StudentDetailsView(request, *args, **kwargs):
             Student_name = form.data['Student_name']
             Father_name = form.data['Father_name']
             Mother_name = form.data['Mother_name']
-            Date_of_Birth = form.data['Date_of_Birth']
+            Date_of_Birth_pre = form.data['Date_of_Birth']
+            Date_of_Birth_format = datetime.strptime(Date_of_Birth_pre, '%Y-%m-%d')
+            Date_of_Birth = Date_of_Birth_format.strftime('%d/%m/%Y')
 
             Subject_English = 'English'
             English_p_test_term2 = form.data['English_p_test_term2']
